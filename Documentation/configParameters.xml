@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE parameters [
+        <!ELEMENT parameters (parameter)*>
+        <!ELEMENT parameter (id|value|description|dimension|accuracy|minimum_value|maximum_value|protocol)*>
+        <!ELEMENT id (#PCDATA)>
+        <!ELEMENT value (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT dimension (#PCDATA)>
+        <!ELEMENT accuracy (#PCDATA)>
+        <!ELEMENT minimum_value (#PCDATA)>
+        <!ELEMENT maximum_value (#PCDATA)>
+        <!ELEMENT protocol (#PCDATA)>
+        ]>
+
+<parameters>
+    <parameter>
+        <id>0</id>
+        <value>0</value>
+        <description>Входное напряжение</description>
+        <dimension>2</dimension>
+        <accuracy>1</accuracy>
+        <minimum_value>-600</minimum_value>
+        <maximum_value>600</maximum_value>
+        <protocol>Ethernet</protocol>
+    </parameter>
+    <parameter>
+        <id>1</id>
+        <value>0</value>
+        <description>Температура силового IGBT транзистора</description>
+        <dimension>1</dimension>
+        <accuracy>0</accuracy>
+        <minimum_value>0</minimum_value>
+        <maximum_value>180</maximum_value>
+        <protocol>Ethernet</protocol>
+    </parameter>
+    <parameter>
+        <id>2</id>
+        <value>0</value>
+        <description>Код ошибки блока</description>
+        <dimension>1</dimension>
+        <accuracy>0</accuracy>
+        <minimum_value>0</minimum_value>
+        <maximum_value>20</maximum_value>
+        <protocol>Ethernet</protocol>
+    </parameter>
+    <parameter>
+        <id>3</id>
+        <value>0</value>
+        <description>Сигнал "Авария" от силового IGBT транзистора</description>
+        <dimension>1</dimension>
+        <accuracy>0</accuracy>
+        <minimum_value>0</minimum_value>
+        <maximum_value>1</maximum_value>
+        <protocol>Ethernet</protocol>
+    </parameter>
+</parameters>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE errors [
+        <!ELEMENT errors (error)*>
+        <!ELEMENT error (id|warning|reason|method_of_elimination)*>
+        <!ELEMENT id (#PCDATA)>
+        <!ELEMENT warning (#PCDATA)>
+        <!ELEMENT reason (#PCDATA)>
+        <!ELEMENT method_of_elimination (#PCDATA)>
+        ]>
+
+<errors>
+    <error>
+        <id>0</id>
+        <warning>Температура IGBT</warning>
+        <reason>Чрезмерно высокая температура транзисторов IGBT</reason>
+        <method_of_elimination>Проверьте условия эксплуатации.Проверьте поток воздуха и работу вентилятора.Проверьте, не загрязнены ли ребра радиатора.Проверьте соответствие мощности двигателя мощности привода.</method_of_elimination>
+    </error>
+   
+    <error>
+        <id>1</id>
+        <warning>Перегрев</warning>
+        <reason>Слишком велика температура модуля силового блока</reason>
+        <method_of_elimination>Проверьте условия эксплуатации.Проверьте поток воздуха и работу вентилятора.Проверьте, не загрязнены ли ребра радиатора.Проверьте соответствие мощности двигателя мощности привода.</method_of_elimination>
+    </error>
+
+    <error>
+        <id>2</id>
+        <warning>Большая разница температур</warning>
+        <reason>Большая разница температур транзисторов IGBT в разных фазах</reason>
+        <method_of_elimination>Проверьте кабель двигателя.Проверьте охлаждение приводного модуля (модулей).</method_of_elimination>
+    </error>
+
+    <error>
+        <id>3</id>
+        <warning>Внешняя температура 1(Редактируемый текст сообщения)</warning>
+        <reason>Измеренная температура 1 превысила предел выдачи сигнала отказа</reason>
+        <method_of_elimination>Проверьте значение параметра 35.02 Измеренная температура 1 Проверьте охлаждение двигателя (или иного оборудования, чья температура измерялась).Проверьте значение параметра 35.12 Предел отказа темпер. 1.</method_of_elimination>
+    </error>
+
+    <error>
+        <id>4</id>
+        <warning>Внешняя температура 2(Редактируемый текст сообщения)</warning>
+        <reason>Измеренная температура 2 превысила предел выдачи сигнала отказа</reason>
+        <method_of_elimination>Проверьте значение параметра 35.03 Измеренная температура 2 Проверьте охлаждение двигателя (или иного оборудования, чья температура измерялась).Проверьте значение параметра 35.22 Предел отказа темпер. 2.</method_of_elimination>
+    </error>
+
+    <error>
+        <id>5</id>
+        <warning>Fan</warning>
+        <reason>Заклинился или отсоединился вентилятор охлаждения</reason>
+        <method_of_elimination>Проверьте работу и подключение вентилятора.Если вентилятор неисправен, замените его.</method_of_elimination>
+    </error>
+
+    <error>
+        <id>6</id>
+        <warning>Вспом. вент. сломан</warning>
+        <reason>Заклинился или отсоединился вспомогательный вентилятор охлаждения</reason>
+        <method_of_elimination>Проверьте вспомогательный вентилятор (вентиляторы) и соединение (соединения).Если вентилятор неисправен, замените его.</method_of_elimination>
+    </error>
+
+    <error>
+        <id>7</id>
+        <warning>Аппар. ошибка STO</warning>
+        <reason>Отказ аппаратных средств системы безопасного отключения крутящего момента</reason>
+        <method_of_elimination>Обратитесь к местному представителю корпорации ABB.</method_of_elimination>
+    </error>
+
+    <error>
+        <id>8</id>
+        <warning>Безопасное откл. крут. моментаПрограммируемый отказ: 31.22 Пуск/стоп индикации STO</warning>
+        <reason>Функция безопасного отключения момента активна, т.е. пропал сигнал (сигналы) цепи защиты, подключенные к разъему XSTO.</reason>
+        <method_of_elimination>Проверьте соединения цепи безопас-ного отключения крутящего момента За дополнительными сведениями обратитесь к соответствующему руко-водству по монтажу и вводу в эксплуатацию привода и описанию параметра 31.22 Пуск/стоп индикации STO (стр. 229).</method_of_elimination>
+    </error>
+
+    <error>
+        <id>...</id>
+        <warning>...</warning>
+        <reason>...</reason>
+        <method_of_elimination>...</method_of_elimination>
+    </error>
+
+    <error>
+        <id>20</id>
+        <warning>Ошибка логики PU</warning>
+        <reason>Очищена память силового блока.</reason>
+        <method_of_elimination>Очищена память силового блока.</method_of_elimination>
+    </error>
+</errors>
