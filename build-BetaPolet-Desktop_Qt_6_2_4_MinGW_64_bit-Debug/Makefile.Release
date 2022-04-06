@@ -99,6 +99,8 @@ compiler_rcc_clean:
 	-$(DEL_FILE) release\qrc_qml.cpp
 release/qrc_qml.cpp: ../BetaPolet/qml.qrc \
 		C:/Qt/6.2.4/mingw_64/bin/rcc.exe \
+		../BetaPolet/POLET.qmlproject.qtds \
+		../BetaPolet/POLET.qmlproject \
 		../BetaPolet/script.js \
 		../BetaPolet/main.qml \
 		../BetaPolet/Screen01.ui.qml \

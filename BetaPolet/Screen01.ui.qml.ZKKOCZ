@@ -8,17 +8,17 @@ Check out https://doc.qt.io/qtcreator/creator-quick-ui-forms.html for details on
 import QtQuick
 import QtQuick 2.0
 import QtQuick.Controls
-//import QtCharts
-
+//import QtCharts 2.15
 import "script.js" as Script
 
 //импортируем код из файла Javascript, назовем этот код именем Script
 Rectangle {
 
-    width: 1280
+    width: 1200
     height: 720
 
-    //color: Constants.backgroundColor
+    color: Constants.backgroundColor
+
     /*ChartView {
         x: 101
         y: 232
@@ -143,7 +143,7 @@ Rectangle {
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.75}
+    D{i:0;formeditorZoom:0.66}
 }
 ##^##*/
 
