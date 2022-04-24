@@ -1,0 +1,3 @@
+var stroke="можно парсит]?";
+
+ function vigruz(){ document.getElementById("in").innerText = "[скорости]  первая_скорость= 50  вторая_скорость= 123.34 [напряжения]   первое= 7  второе= 450+";};
