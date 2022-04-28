@@ -1,0 +1,1 @@
+function vgruz(){ document.getElementById("in").innerText = "[speed] first=60 second=123.34[dop_param] first=7 second=450:+";};
