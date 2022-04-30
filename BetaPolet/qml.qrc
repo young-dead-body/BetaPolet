@@ -1,11 +1,11 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>Screen01.ui.qml</file>
         <file>script.js</file>
         <file>images/Layer 1.png</file>
         <file>images/Untitled-2.png</file>
         <file>POLET.qmlproject</file>
         <file>POLET.qmlproject.qtds</file>
+        <file>Screen01.ui.qml</file>
     </qresource>
 </RCC>

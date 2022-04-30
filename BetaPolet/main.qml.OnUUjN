@@ -1,0 +1,45 @@
+import QtQuick 2.4
+import QtQuick.Window 2.15
+import QtCharts 2.15
+
+Window {
+    width: 640
+    height: 480
+    visible: true
+    title: qsTr("Hello World")
+
+    /*Screen01 {
+            id: mainScreen
+        }*/
+
+    ChartView {
+        id: line
+        x: 222
+        y: 327
+        width: 300
+        height: 300
+        LineSeries {
+            name: "LineSeries"
+            XYPoint {
+                x: 0
+                y: 2
+            }
+
+            XYPoint {
+                x: 1
+                y: 1.2
+            }
+
+            XYPoint {
+                x: 2
+                y: 3.3
+            }
+
+            XYPoint {
+                x: 5
+                y: 2.1
+            }
+        }
+    }
+
+}

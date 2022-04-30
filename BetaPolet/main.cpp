@@ -1,5 +1,8 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QtWidgets/QApplication>
+
+
 
 
 int main(int argc, char *argv[])
@@ -12,7 +15,6 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 //======================================
     engine.addImportPath("qmlLib/");
-    qDebug()<<engine.importPathList();
 //======================================
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
@@ -21,6 +23,8 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
     engine.load(url);
-
+    //======================================
+    qDebug()<<engine.importPathList();
+    //======================================
     return app.exec();
 }
