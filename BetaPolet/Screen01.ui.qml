@@ -18,7 +18,7 @@ Rectangle {
     width: 1280
     height: 720
 
-    //color: Constants.backgroundColor
+    color: Constants.backgroundColor
 
     Item {
         // @disable-check M221
@@ -36,6 +36,11 @@ Rectangle {
         }
     }
 
+    Canvas{
+        id: myChart
+        width: 400
+        height: 400
+    }
 
     Image {
         id: layer1
