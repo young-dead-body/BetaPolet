@@ -1,0 +1,61 @@
+.pragma library
+
+//если мы хотим обратиться к элементу, мы должны его передать через CSS и принять в JS
+
+function func() {
+
+}
+//======================================
+let i = -131.65;
+let time = 0;
+var root = true;
+let gob = 1;
+function run(frame){
+
+    if(frame.rotation < 131.65 && root){
+        i+=0.5;
+        frame.rotation = i;
+    }else{
+        i-=0.5;
+        if(i < -131.65){
+        root = true;
+        }
+        else{
+            frame.rotation = i;
+            root = false;
+        }
+    }
+    time+=0.1;
+}
+
+window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer", {
+
+      title:{
+        text: "Fruits sold in First Quarter"
+      },
+      data: [//array of dataSeries
+        { //dataSeries object
+
+         /*** Change type "column" to "bar", "area", "line" or "pie"***/
+         type: "column",
+         dataPoints: [
+         { label: "banana", y: 18 },
+         { label: "orange", y: 29 },
+         { label: "apple", y: 40 },
+         { label: "mango", y: 34 },
+         { label: "grape", y: 24 }
+         ]
+       }
+       ]
+     });
+
+    chart.render();
+  }
+
+
+
+
+
+
+

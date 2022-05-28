@@ -54,7 +54,7 @@ SOURCES       = ..\BetaPolet\main.cpp debug\qrc_qml.cpp
 OBJECTS       = debug/main.o \
 		debug/qrc_qml.o
 
-DIST          =   ..\BetaPolet\main.cpp
+DIST          = Chart.js  ..\BetaPolet\main.cpp
 QMAKE_TARGET  = BetaPolet
 DESTDIR        = debug\ #avoid trailing-slash linebreak
 TARGET         = BetaPolet.exe

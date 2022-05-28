@@ -6,13 +6,19 @@ function func() {
 
 }
 
-
 //======================================
 let i = -131.65;
 let time = 0;
 var root = true;
+let gob = 1;
 
-function run(frame){
+var myCanvas;
+var ctx;
+
+function run(frame, mC){
+ var endi = i;
+    var endtime = time;
+
     if(frame.rotation < 131.65 && root){
         i+=0.5;
         frame.rotation = i;
@@ -27,40 +33,46 @@ function run(frame){
         }
     }
     time+=0.1;
+
+/*if(gob == 1)
+{*/
+    myCanvas = mC;
+    myCanvas.width = 300;
+    myCanvas.height = 300;
+
+    ctx = myCanvas.getContext("2d");
+    drawLine(ctx,0,0,0,200);
+    drawLine(ctx,0,200,200,200);
+    drawLine(ctx,200,200,200,0);
+    drawLine(ctx,200,0,0,0);
+
+    gob++;
+    drawLine(ctx,Math.abs(endtime),Math.abs(endi),Math.abs(time),Math.abs(i));
+
+/*}
+else{
+    drawLine(ctx,Math.abs(endtime),Math.abs(endi),Math.abs(time),Math.abs(i));
+    console.log(Math.abs(endtime),Math.abs(endi),Math.abs(time),Math.abs(i)); // 2
+}*/
+
+
 }
-//======================================
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
+
+
+function drawLine(ctx, startX, startY, endX, endY){
+
+    ctx.beginPath();
+
+    /*startX = parseInt(startX,10);
+    startY = parseInt(startY,10);
+    endX = parseInt(endX,10);
+    endY = parseInt(endY,10);*/
+
+    ctx.moveTo(startX,startY);
+    ctx.lineTo(endX,endY);
+    ctx.stroke();
+}
+
+
+
+

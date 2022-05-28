@@ -15,9 +15,8 @@ import "Chart.js" as Chart
 
 //импортируем код из файла Javascript, назовем этот код именем Script
 Rectangle {
-    id:mainScreen
     // @disable-check M222
-    FontLoader: Chart.func(myChart)
+    FontLoader: Chart.func(myChart);
 
     width: 1280
     height: 720
@@ -33,11 +32,21 @@ Rectangle {
             //onTriggered: time.text = Date().toString()
             // @disable-check M222
             onTriggered: Script.run(frame)
+
         }
 
         Text {
             id: time
         }
+    }
+
+    Canvas{
+        id: myCanvas
+        x: 100
+        y: 100
+        width: 500
+        height: 500
+
     }
 
     Image {
@@ -125,6 +134,7 @@ Rectangle {
         text: qsTr("Button")
     }
 
+
     TextInput {
         id: textInput
         x: 111
@@ -135,7 +145,7 @@ Rectangle {
         font.pixelSize: 12
     }
 
-    /*ChartView {
+    ChartView {
         id: line
         x: 222
         y: 327
@@ -163,5 +173,12 @@ Rectangle {
                 y: 2.1
             }
         }
-    }*/
+    }
+
+
+
+
 }
+
+
+

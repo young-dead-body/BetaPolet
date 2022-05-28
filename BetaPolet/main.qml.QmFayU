@@ -17,8 +17,7 @@ Window {
             running: true
             repeat: true
             //onTriggered: time.text = Date().toString()
-            onTriggered: Script.run(frame, myCanvas)
-
+            onTriggered: Script.run(frame)
         }
 
         Text {
@@ -55,14 +54,7 @@ Window {
         }
     }
 
-    Canvas{
-        id:myCanvas;
-        x:200
-        y:200
-        width: 400;
-        height: 400;
-    }
-
+    ChartView{}
 /*
     ChartView{
         id: line
